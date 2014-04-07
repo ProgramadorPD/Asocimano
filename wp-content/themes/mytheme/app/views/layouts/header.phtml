@@ -1,0 +1,47 @@
+<?php if ( getAction() != 'index' ) { ?>
+<style>
+	div.container { background-image: none; background: white !important; }
+</style>
+<header>
+	<div class="header-logo">
+		<img src="<?php echo getUrlImage( 'header-logo.png' ) ?>" alt="Asocimano Logo" />
+	</div>
+	<nav class="header-nav">
+		<ul>
+			<li>
+				<a href="<?php echo getUrl( '', 'congreso' ) ?>">Congreso 2014</a>
+			</li>
+			<li>
+				<a href="<?php echo getUrl() ?>">Home</a>
+			</li>
+			<li>
+				<a href="<?php echo getUrl( '', 'historia' ) ?>">Historia</a>
+			</li>
+			<li>
+				<a href="<?php echo getUrl( '', 'casos' ) ?>">Casos</a>
+			</li>
+			<li>
+				<a href="<?php echo getUrl( '', 'noticias' ) ?>">Noticias</a>
+			</li>
+			<li>
+				<a href="<?php echo getUrl( '', 'contacto' ) ?>">Contactos</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="social-links">
+		<img src="<?php echo getUrlImage( 'links-social.jpg' ) ?>" alt="Social Links" />
+	</div>
+	<div class="header-slideshow">
+		<img src="<?php echo getUrlImage( 'header-slide-1.jpg' ) ?>" alt="Slide 1" />
+	</div>
+	<div class="title-page">
+		<h2 class="text-top">
+			<span>Congreso</span>
+		</h2>
+		<h2 class="text-bot">
+			<span>2014</span>
+		</h2>
+	</div>
+	<div class="separator header-separator"></div>
+</header>
+<?php } ?>

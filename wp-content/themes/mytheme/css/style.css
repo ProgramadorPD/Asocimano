@@ -1,0 +1,576 @@
+html, body {
+    text-align: center;
+    max-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    /*overflow-x: hidden;*/
+    overflow-y: hidden;
+}
+
+a, button, input {
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+
+a, button, input[ type='submit' ] {
+    outline: none !important;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+table thead {
+    background: rgba(91,192,222,.9);
+}
+
+table th {
+    text-align: center;
+}
+
+table td {
+    line-height: 40px !important;
+}
+
+td.emptyUsers {
+    font-weight: bold;
+    color: red;
+}
+
+form div {
+    position: relative;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+input[ type='text' ], input[ type='password' ], input[ type='email' ] {
+    border: 1px solid silver;
+    background: white;
+    width: 230px;
+    padding: 7px;
+    color: black;
+    border-radius: 9px;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+}
+
+input[ type='text' ]:focus, input[ type='password' ]:focus, input[ type='email' ]:focus {
+    box-shadow: 0 0 8px rgba(91,192,222,.8);
+    border: 1px solid rgb(91,192,222);
+}
+
+input[ type='text' ][disabled], input[ type='password' ][disabled], input[ type='email' ][disabled] {
+    box-shadow: 0 0 8px rgba(250,192,222,.8);
+    border: 1px solid rgb(91,192,222);
+}
+
+span.tooltip-form {
+    position: absolute;
+    display: block;
+    width: 195px;
+    left: 50%;
+    margin-left: 125px;
+    color: #FFFFFF;
+    background: rgba(217,83,79,.9);
+    line-height: 30px;
+    text-align: center;
+    border-radius: 6px;
+    top: 46%;
+}
+
+span.tooltip-form:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-right: 8px solid rgba(217,83,79,.9);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.btn-inverse {
+    background: rgba(0,0,0,.75);
+    color: white;
+}
+
+.btn-inverse:hover {
+    background: rgba(0,0,0,.95);
+    color: white !important;
+}
+
+.label-silver {
+    background: rgb(222,222,222);
+    color: #444;
+}
+
+/**--------------------------------------------------------------------------**/
+
+header {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: white;
+}
+
+header > div.header-logo {
+    visibility: visible;
+    left: 10px;
+    top: 4px;
+    min-width: 307px;
+    min-height: 99px;
+    position: absolute;
+}
+
+header > div.header-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+header > nav.header-nav {
+    visibility: visible;
+    left: 69px;
+    top: 83px;
+    width: 563px;
+    min-height: 20px;
+    position: absolute;
+}
+
+header > nav.header-nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+}
+
+header > nav.header-nav > ul > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 25px;
+
+}
+
+header > div.social-links {
+    visibility: visible;
+    left: 677px;
+    top: 50px;
+    min-width: 86px;
+    min-height: 23px;
+    position: absolute;
+}
+
+header > div.header-slideshow {
+    visibility: visible;
+    overflow: hidden;
+    left: 816px;
+    top: 12px;
+    width: 109px;
+    min-height: 153px;
+    position: absolute;
+}
+
+header > div.title-page {
+    visibility: visible;
+    left: 603px;
+    top: 137px;
+    width: 183px;
+    /*min-height: 124px;*/
+    position: absolute;
+}
+
+header > div.title-page > h2 {
+    display: block;
+    line-height: 40px;
+    margin: 0;
+    text-align: right;
+    padding: 0 5px;
+}
+
+header > div.title-page span {
+    font-family: 'Marzo-Regular' !important;
+}
+
+div.separator {
+    visibility: visible;
+    border-bottom: 2px solid rgb(100, 183, 67);
+    min-width: 0px;
+    height: 0px;
+    min-height: 0px;
+}
+
+header > div.header-separator {
+    left: 1px;
+    top: 176px;
+    position: absolute;
+    width: 100%;
+}
+
+
+/**--------------------------------------------------------------------------**/
+section#wrapper-main-content {
+    position: relative;
+    width: 100%;
+    background: rgb(255,255,255);
+    height: 100%;
+}
+
+section#wrapper-content {
+    visibility: visible;
+    padding-bottom: 0px;
+    width: 980px;
+    margin-top: 0px;
+    min-height: 753px;
+    position: relative;
+    margin: 0 auto;
+}
+
+section#wrapper-content > div.container, section#wrapper-content > div.sub-container {
+    visibility: visible;
+    width: 980px;
+    min-height: 677px;
+    top: 17px;
+    position: absolute;
+}
+
+section#wrapper-content > div.container {
+    background: white url( './../images/background.jpg' ) no-repeat;
+}
+
+section#wrapper-content > div.sub-container {
+    display: none;
+    width: 0;
+    height: 0;
+    left: 476px;
+    margin: 0 auto;
+}
+
+section#wrapper-content div.line-shadow {
+    background: url( './../images/line-shadow.png' );
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 3px;
+    bottom: -15px;
+}
+
+section#wrapper-content div.line-shadow.sh-left {
+    width: 50px;
+    background-position: 0% 0%;
+    left: -15px;
+}
+
+section#wrapper-content div.line-shadow.sh-top {
+    right: 35px;
+    left: 35px;
+    background-position: 50% 0%;
+}
+
+section#wrapper-content div.line-shadow.sh-right {
+    width: 50px;
+    background-position: 100% 0%;
+    right: -15px;
+}
+
+section#wrapper-content div.load-content-wrapper {
+    background: white;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    z-index: 5000;
+}
+
+div.container > div.container-logo {
+    visibility: visible;
+    left: 7px;
+    top: 42px;
+    min-width: 453px;
+    min-height: 149px;
+    position: absolute;
+}
+
+div.container > nav.container-menu {
+    word-wrap: break-word;
+    visibility: visible;
+    left: 823px;
+    top: 20px;
+    width: 134px;
+    min-height: 186px;
+    position: absolute;
+}
+
+nav.container-menu > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+nav.container-menu > ul > li {
+    display: block;
+    position: relative;
+    height: 100%;
+    padding: 5px 0;
+    border-bottom: 2px solid rgb(100,183,67);
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+nav.container-menu > ul > li:hover {
+    background: rgba(255,255,255,.6);
+    box-shadow: inset 0 0 5px rgba(50,50,50,.3);
+}
+
+nav.container-menu > ul > li > a {
+    text-decoration: none;
+    margin: 0px;
+    width: 100%;
+    line-height: normal;
+    letter-spacing: normal;
+    display: inline-block;
+    height: 100%;
+}
+
+nav.container-menu > ul > li > a.font-nav {
+    font: normal normal normal 22px/1.4em 'open sans', sans-serif;
+    color: rgb(113,112,112);
+}
+
+nav.container-menu > ul > li > a.nav-link {
+    line-height: 1em;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Marzo-Regular' !important;
+    color: rgb(160, 207, 142);
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 3px rgba(50,50,50,.1);
+}
+
+div.container > div.box-subcontainer {
+
+    border-left: 2px solid rgb(74, 74, 74);
+    margin-left: -1px;
+    display: block;
+    background: white;
+    width: 0px;
+    visibility: visible;
+    left: 476px;
+    top: 182px;
+    min-height: 470px;
+    position: absolute;
+}
+
+div.container > div.arrow-item {
+    visibility: visible;
+    min-width: 58px;
+    min-height: 30px;
+    line-height: 30px;
+    position: absolute;
+    z-index: 50;
+}
+
+div.container > div.arrow-item > a {
+    text-decoration: none;
+    cursor: pointer;
+    font: normal normal normal 15px/1.4em arial, 'ｍｓ ｐゴシック', 'ms pgothic', 돋움, dotum, helvetica, sans-serif;
+    color: rgb(74,74,74);
+    white-space: nowrap;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+}
+
+div.container > div.arrow-item > a:hover {
+    color: rgb(114,114,114);
+    text-shadow: 0 0 8px rgba(50,50,50,.1);
+}
+
+div.container > div.arrow-item.item-1 {
+    left: 486px;
+    top: 181px;
+}
+
+div.container > div.arrow-item.item-2 {
+    left: 486px;
+    top: 380px;
+}
+
+div.container > div.arrow-item.item-3 {
+    left: 399px;
+    top: 470px;
+}
+
+div.container > div.arrow-item.item-4 {
+    left: 486px;
+    top: 545px;
+}
+
+div.container > div.arrow-item.item-5 {
+    left: 384px;
+    top: 627px;
+}
+
+div.container > div.arrow-item.item-6 {
+    left: 30px;
+    top: 538px;
+}
+
+div.container > div.container-slideshow {
+    visibility: visible;
+    left: 731px;
+    top: 399px;
+    width: 226px;
+    height: 239px;
+    position: absolute;
+}
+
+div.container > div.container-slideshow-market {
+    visibility: visible;
+    overflow: hidden;
+    left: 9px;
+    top: 565px;
+    width: 220px;
+    height: 70px;
+    position: absolute;
+}
+
+
+
+/**--------------------------------------------------------------------------**/
+
+section.loaded-page-main-container {
+    visibility: visible;
+    left: 0;
+    top: 177px;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+section.loaded-page-main-container > div.loaded-page-content {
+    display: block;
+    min-height: 466px;
+    position: relative;
+    background-image: url( './../images/congreso-front.jpg' );
+    background-repeat: no-repeat;
+}
+
+section.loaded-page-main-container > div.loaded-page-content > aside.congreso-content {
+    visibility: visible;
+    left: 390px;
+    top: 40px;
+    width: 383px;
+    min-height: 410px;
+    position: absolute;
+    word-wrap: break-word;
+}
+
+aside.congreso-content > ul {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+aside.congreso-content > ul > li {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid rgb(100, 183, 67);
+}
+
+aside.congreso-content > ul > li:last-child {
+    border-bottom: 0;
+}
+
+aside.congreso-content > ul > li > p {
+    color: rgb(74, 74, 74);
+    font: normal normal normal 16px/1.3em arial, 'ｍｓ ｐゴシック', 'ms pgothic', 돋움, dotum, helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+aside.congreso-content > ul > li > p > span {
+    padding: 5px;
+    display: inline-block;
+    line-height: 1.2em;
+}
+
+aside.congreso-content > ul > li > p > span.text-left {
+    margin-left: 5px;
+    max-width: 250px;
+}
+
+aside.congreso-content > ul > li > p > span.text-right {
+    margin-right: 5px;
+    position: absolute;
+    right: 0;
+}
+
+aside.congreso-content > ul > li > p > span.text-title {
+    font-family: 'Marzo-Regular';
+    font-size: 1.6em;
+    letter-spacing: 2px;
+}
+
+aside.congreso-content > ul > li > p > span.text-invite {
+    margin-left: 5px;
+    font-size: 15px;
+    line-height: 0.8em;
+}
+
+aside.congreso-content > ul > li > p span.invite-country {
+    color: rgb(100, 183, 67);
+}
+
+
+/**--------------------------------------------------------------------------**/
+
+.arrow-t, .arrow-r .arrow-b, .arrow-l, .arrow-tl, .arrow-tr, .arrow-bl:after, .arrow-br:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    line-height: 0px;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+.arrow-br:before {
+    top: 0;
+    left: -34px;
+    border-width: 0 0 25px 25px;
+    border-color: transparent transparent #9bbf40 transparent;
+    _border-color: #000000 #000000 #9bbf40 #000000;
+}
+
+.arrow-bl:after {
+    top: 0;
+    right: -34px;
+    border-width: 25px 0 0 25px;
+    border-color: transparent transparent transparent #9bbf40;
+    _border-color: #000000 #000000 #000000 #9bbf40;
+}
